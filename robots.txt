@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://joao-jleite.github.io/sitemap.xml
