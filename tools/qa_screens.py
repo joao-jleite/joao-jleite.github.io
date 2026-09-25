@@ -37,7 +37,19 @@ def main() -> int:
             page.on("pageerror", lambda e: errors.append(str(e)))
             page.on("requestfailed", lambda r: failed.append(r.url))
             page.on("response", lambda r: failed.append(f"{r.status} {r.url}") if r.status >= 400 else None)
-            page.goto(URL, wait_until="networkidle")
+            # retry: conexoes com o GitHub Pages as vezes sofrem reset na rede local
+            for attempt in range(4):
+                try:
+                    page.goto(URL, wait_until="networkidle", timeout=60000)
+                    break
+                except Exception as exc:  # noqa: BLE001
+                    print(f"  goto falhou ({exc.__class__.__name__}), tentativa {attempt + 1}/4")
+                    page.wait_for_timeout(3000)
+            else:
+                problems.append(f"{name}: page did not load")
+                ctx.close()
+                continue
+            failed.clear()  # descarta falhas de tentativas anteriores
             # rola a pagina toda para disparar lazy-load antes do print
             page.evaluate("""async () => {
                 for (let y = 0; y < document.body.scrollHeight; y += 600) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 180)); }
