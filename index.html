@@ -395,6 +395,56 @@
           </div>
         </div>
       </article>
+
+      <!-- Case: D'Andrade Moda (client) -->
+      <article class="case case-dand" aria-labelledby="dand-title">
+        <header class="case-head">
+          <span class="tag tag-client" data-i18n="tag.client">Client project</span>
+          <h3 id="dand-title" class="case-title" data-i18n="dand.title">D’Andrade Moda: an online boutique with an admin panel</h3>
+          <p class="case-client" data-i18n="dand.client">Small Brazilian boutique of modest, timeless women's fashion.</p>
+        </header>
+        <div class="case-body">
+          <div class="gallery gallery-feature" data-gallery="dand">
+            <a class="shot shot-lead" href="assets/img/dandrade-home-1440.webp">
+              <img src="assets/img/dandrade-home-720.webp" srcset="assets/img/dandrade-home-720.webp 720w, assets/img/dandrade-home-1440.webp 1440w" sizes="(min-width: 1000px) 620px, 100vw" width="720" height="405" loading="lazy" decoding="async" alt="D’Andrade Moda home page in Portuguese: brand logo and tagline next to a line drawing of a dress, with the category menu on the left." data-i18n-alt="dand.i1.alt">
+              <span class="shot-cap" data-i18n="dand.i1.cap">Home page (Portuguese). Category menu on the left, WhatsApp support always one tap away.</span>
+            </a>
+            <a class="shot" href="assets/img/dandrade-catalog-1440.webp">
+              <img src="assets/img/dandrade-catalog-720.webp" srcset="assets/img/dandrade-catalog-720.webp 720w, assets/img/dandrade-catalog-1440.webp 1440w" sizes="(min-width: 1000px) 150px, 25vw" width="720" height="405" loading="lazy" decoding="async" alt="Product grid with dresses and skirts, prices and badges such as number of colors or photos." data-i18n-alt="dand.i2.alt">
+              <span class="shot-cap" data-i18n="dand.i2.cap">Featured items: prices, color and photo badges, favorites. Product photos by the client.</span>
+            </a>
+            <a class="shot" href="assets/img/dandrade-product-1440.webp">
+              <img src="assets/img/dandrade-product-720.webp" srcset="assets/img/dandrade-product-720.webp 720w, assets/img/dandrade-product-1440.webp 1440w" sizes="(min-width: 1000px) 150px, 25vw" width="720" height="405" loading="lazy" decoding="async" alt="Product page with a dress photo, price, color and size buttons and a quantity selector." data-i18n-alt="dand.i3.alt">
+              <span class="shot-cap" data-i18n="dand.i3.cap">Product page: color, size and quantity come from the stock the owner keeps in the admin panel.</span>
+            </a>
+            <a class="shot shot-tall" href="assets/img/dandrade-mobile-home-780.webp">
+              <img src="assets/img/dandrade-mobile-home-390.webp" srcset="assets/img/dandrade-mobile-home-390.webp 390w, assets/img/dandrade-mobile-home-780.webp 780w" sizes="(min-width: 1000px) 150px, 25vw" width="390" height="844" loading="lazy" decoding="async" alt="Home page on a phone with search at the top and a bottom bar for home, categories, favorites and bag." data-i18n-alt="dand.i4.alt">
+              <span class="shot-cap" data-i18n="dand.i4.cap">On a phone: search at the top and an app-style bottom bar.</span>
+            </a>
+            <a class="shot shot-tall" href="assets/img/dandrade-mobile-product-780.webp">
+              <img src="assets/img/dandrade-mobile-product-390.webp" srcset="assets/img/dandrade-mobile-product-390.webp 390w, assets/img/dandrade-mobile-product-780.webp 780w" sizes="(min-width: 1000px) 150px, 25vw" width="390" height="844" loading="lazy" decoding="async" alt="Product page on a phone with a large photo and thumbnails of the other photos." data-i18n-alt="dand.i5.alt">
+              <span class="shot-cap" data-i18n="dand.i5.cap">Product page on a phone, with the photo gallery.</span>
+            </a>
+          </div>
+          <div class="case-text">
+            <p class="case-summary" data-i18n="dand.summary">I built, launched and handed over the store: storefront, admin panel, database and the move to the client's own account and domain.</p>
+            <ul class="checks">
+              <li data-i18n="dand.h1">Catalog by category with colors, sizes and quantities, search and favorites. The bag is saved in the browser and becomes a complete order summary sent on WhatsApp.</li>
+              <li data-i18n="dand.h2">Private admin panel where the owner adds items and photos and updates prices and stock herself. Every admin screen and API route checks the session on the server.</li>
+              <li data-i18n="dand.h3">React and TypeScript on Cloudflare Workers, with a D1 (SQLite) database: no server to maintain.</li>
+              <li data-i18n="dand.h4">Moved the data, the site and the domain from my account to the client's own Cloudflare account, checking every table after the copy.</li>
+            </ul>
+            <ul class="stack" aria-label="Stack" data-i18n-aria="label.stack">
+              <li>React</li><li>TypeScript</li><li>Cloudflare Workers</li><li>D1</li><li>Tailwind</li>
+            </ul>
+            <a class="btn btn-secondary btn-sm" href="https://dandrademoda.com.br" target="_blank" rel="noopener">
+              <span data-i18n="derm.link">Visit the live site</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+            </a>
+            <p class="credit" data-i18n="dand.credit">Brand, product photos and catalog content by the client. Shown with the client's permission.</p>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -481,7 +531,7 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <p>© 2026 João Vitor Sousa Leite · Embu das Artes, SP, <span data-i18n="about.brazil">Brazil</span></p>
-    <p class="footer-note" data-i18n="footer.note">Demos use fictitious data. Dermatech Medical is shown with the client's permission.</p>
+    <p class="footer-note" data-i18n="footer.note">Demos use fictitious data. Client projects are shown with the clients' permission.</p>
     <a class="text-link" href="#top"><span data-i18n="footer.top">Back to top</span> <span aria-hidden="true">↑</span></a>
   </div>
 </footer>
